@@ -1,0 +1,320 @@
+*{padding: 0px;margin: 0px;}
+html,body{
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    width:100%;
+    font-weight: bold;
+}
+
+#container{
+    width: 100%;
+    height:100vh; 
+	top:0;
+    left:0;
+	position:fixed;
+	padding:0;
+	background-color: #FAFFF7;
+	overflow-y:auto;
+    overflow-x:hidden;
+	
+}
+#header{
+	background-color: #FAFFF7;
+	height: 100px;
+	width:100%;
+	margin:0 auto;
+	font-size: 36px;
+    text-transform: uppercase;
+    color: #90744F;
+    padding-left: 10px;
+    line-height: 100px;
+    border-bottom: 1px solid #CED4CC;
+}
+#content{
+	min-height:80.8%;
+	margin:0 auto;
+	padding-bottom: 2em;
+}
+
+/*Elements on top div*/
+#top{
+	height:160px;
+	padding:10px;
+	background-color: #F5ECFA;
+	border-bottom: 1px solid #CED4CC;
+	display: -webkit-flex;
+    display: flex;
+     -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content:center;
+	justify-content:center;
+}
+#searchDiv{
+	width:400px;
+	height:60px;
+	margin-right:10px;
+	text-align:center;
+	padding:8px 0;
+}
+
+#instagrams{
+	width:300px;
+	padding: 8px 20px;
+	outline:none;
+	border:1px solid #CED4CC;
+	background-color:#FAFFF7; 
+	font-weight:bold;
+	color: rgba(144,116,79,1);
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'Arima Madurai', cursive;
+}
+input#instagrams::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #C1C0A2;
+}
+input#instagrams:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #C1C0A2;
+   opacity:  1;
+}
+input#instagrams::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #C1C0A2;
+   opacity:  1;
+}
+input#instagrams:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:   #C1C0A2;
+}
+#form-buttons{
+	display:inline-block;
+	margin:10px;
+}
+
+#btn-search{
+	background-color: #F5ECFA; 
+	border:0px;
+  	border-right: 2px solid #90744F;
+    color: #90744F;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline:none;
+    font-weight: bold;
+    padding: 13px 20px;
+}
+#btn-search:hover{
+	background-color: #90744F;
+	cursor: pointer;
+	transition:0.4s;
+	color: #F5ECFA;
+}
+
+#btn-reset{
+	background-color: #F5ECFA; 
+    border: 0px;
+    color: #90744F;
+    padding: 13px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline:none;
+    font-weight: normal;
+}
+
+#btn-reset:hover{
+	cursor: pointer;
+	background-color: #90744F;
+	cursor: pointer;
+	transition:0.4s;
+	color: #F5ECFA;
+}
+#acc{
+	width:180px; 
+	margin:8px 0;
+	padding: 10px 20px;
+	outline:none;
+	border:2px solid #676269;
+	font-size: 12px;
+}
+#acc:focus{
+	background-color: #F5ECFA;
+}
+#addDiv{
+	margin-top:15px;
+}
+.field-wrapper{
+	position:relative;
+}
+.field-error-message{
+	position:absolute;
+	right:40px;
+	top:58px;
+	visibility:hidden;
+	border:2px solid #C61A1A;
+	padding:8px 5px 8px 5px;
+	background-color: #C61A1A;
+	color:#FAFFF7;
+	font-weight: normal;
+}
+.field-error-message::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; /* At the bottom of the tooltip */
+    left: 10%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent transparent #C61A1A transparent;
+}
+#btn-add{
+	background-color: #F5ECFA; 
+    border: 2px solid  #F5ECFA;
+    color: #676269;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline:none;
+    font-weight: bold;
+}
+#btn-add:hover{
+	cursor: pointer;
+	border: 2px solid #676269;
+}
+
+/*Elements on photos div*/
+#photos{
+	text-align: center;
+	color: #90744F;
+	padding-top: 20px;
+	margin:0 auto;
+	display: -webkit-flex;
+	display:flex;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+#loader{
+ 	position:absolute;
+	top:50%;
+	right:50%;
+	z-index:1;
+	border:16px solid #F5ECFA;
+	border-top:16px solid #CED4CC;
+	border-radius:50%;
+	height:100px;
+	width:100px;
+	animation:loader 2s linear infinite; 
+	display:none;
+	animation-play-state:paused;
+}
+@-webkit-keyframes loader {
+    0% {-webkit-transform: rotate(0deg);} 
+    100% {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes loader{
+	0% {-webkit-transform: rotate(0deg);} 
+    100% {-webkit-transform:rotate(360deg);}	
+}
+
+.retrievedAcc{
+	text-align: left;
+	line-height:60px;
+	width:100%;
+	margin:20px 0;
+	padding-left:20px;
+	clear:left;
+	background-color: #90744F;
+	text-transform: uppercase;
+	color:#FAFFF7;
+}
+
+.photoWrap{
+	margin:20px;
+	float: left;
+	min-height:100px;
+	min-width:100px;
+	background-color: #E9D5D5;
+	display:inline-block;
+}
+.photoWrap img:hover{
+	cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(123, 115, 124, 1), 0 6px 20px 0 rgba(123, 115, 124, 1);
+}
+
+/*Elements on footer  div*/
+#footer{
+	clear: both;
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid #CED4CC;
+	background-color: #FAFFF7;
+	text-align:center;
+	display:block;
+	height: 40px;
+	width:100%;
+	margin:0 auto;
+	margin-top: -2em;
+	font-size: 16px;
+    color: #90744F;
+    padding-left: 10px;
+    line-height: 40px;
+}
+/*media queries*/
+@media screen and (min-width:1150px){
+	#top{
+		height:70px;
+		 -webkit-justify-content:flex-start;
+		justify-content:flex-start;
+	}
+	#searchDiv{
+		margin-right:auto;
+		margin-bottom:10px;
+		width:800px;
+		height:100px;
+	}
+	#instagrams{
+		width:500px;
+		border:2px solid #90744F;
+		background-color:#F5ECFA; 
+		color: rgba(144,116,79,1);
+		font-size: 16px;
+	}
+	#btn-search{
+	 	border-right: 2px solid #90744F;
+	}
+	#acc{
+		font-size: 16px;
+	}
+	#form-buttons{
+		margin-top:0px;
+	}
+	#addDiv{
+		margin-top:0px;
+	}
+	#btn-add{
+   		padding: 10px 10px;
+	}
+}
+
+@media screen and (min-width:693px) and (max-width:1149px){
+	#top{
+		height:100px;
+	}
+	#addDiv{
+		margin-top:0px;
+	}
+	#btn-add{
+	    padding: 10px 10px;
+	}
+	
+}
+
